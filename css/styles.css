@@ -1,0 +1,118 @@
+html,body {
+	width: 100%;
+	height: 100%;
+}
+
+@font-face {
+
+	font-family: 'Archivo';
+	src: url(../fonts/Archivo.ttf);
+
+}
+
+@keyframes fishflops {
+ 0%   { font-variation-settings: "wght" 10; }
+ 100% { font-variation-settings: "wght" 600;  }
+}
+
+.center {
+
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+
+}
+
+.background {
+
+	width: 300px;
+	height: 600px;
+	background-color: #0096FF;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+
+}
+
+
+.logo	{
+
+	position: absolute;
+	left: 200px;
+	top: 10px;
+
+
+}
+
+@keyframes expand {
+
+	0% {transform: scale(.2);}
+	100% {transform: scale(.3);}
+
+}
+
+.fish	{
+
+	position: absolute;
+	transform: scale(.2);
+	left: -460px;
+	top: -325px;
+	animation-name: expand;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate-reverse;
+	z-index: 9;
+
+}
+
+
+.fishflops {
+
+	font-size: 150px;
+	color: white;
+	font-family: Archivo;
+	animation-name: fishflops;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate-reverse;
+
+}
+
+@keyframes spin {
+
+	0% {transform: rotate(0deg) scale(.15);}
+	50% {transform: rotate(180deg) scale(.2);}
+	100% {transform: rotate(360deg) scale(.15);}
+
+}
+
+.star	{
+
+	position: absolute;
+	transform: scale(.20);
+	left: -400px;
+	top: -175px;
+	animation-name: spin;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+}
+
+.price	{
+
+	font-family: Archivo;
+	text-shadow: -2px -2px 0 #0096FF, 2px -2px 0 #0096FF, -2px 2px 0 #0096FF, 2px 2px 0 #0096FF;
+	font-weight: 900;
+	font-size: 40px;
+	left: 150px;
+	top: 420px;
+	position: absolute;
+	z-index: 9;
+
+}
